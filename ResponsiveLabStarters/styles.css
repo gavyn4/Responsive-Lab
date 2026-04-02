@@ -1,0 +1,148 @@
+/* 
+   Base Styles - Mobile First 
+   The default styles apply to all screen sizes, 
+   but are optimized for mobile devices first.
+*/
+
+body {
+    font-family: Arial, sans-serif;
+    /* Sets a clean, readable font */
+    margin: 0;
+    /* Removes default margin */
+    padding: 0;
+    /* Removes default padding */
+    background-color: #f4f4f4;
+    /* Light gray background for contrast */
+    text-align: center;
+    /* Centers text by default */
+}
+
+header {
+    background-color: #4CAF50;
+    /* Green background for the header */
+    color: white;
+    /* White text for contrast */
+    padding: 20px;
+    /* Adds space inside the header */
+    position: relative;
+    /* Provides an anchor point for our navigation positioning */
+    text-align: center;
+    /* Centers the text */
+    z-index: 10;
+    /* Ensures header stays above other elements */
+}
+
+.menu {
+    list-style: none;
+    /* Removes default bullet points */
+    padding: 0;
+    /* Resets padding */
+    margin: 0;
+    /* Resets margin */
+}
+
+/* 
+   Hide navigation by default on mobile 
+   The menu will be hidden initially and shown using the hamburger menu.
+*/
+nav {
+    display: none;
+    /* Hides the navigation by default */
+    background: #333;
+    /* Dark background for contrast */
+    position: absolute;
+    /* Positions the menu below the header */
+    left: 0;
+    top: 80px;
+    /* Places it just below the header */
+    width: 100%;
+    /* Makes it full width */
+    z-index: 9;
+    /* Ensures it appears below the header */
+}
+
+/* Styles for menu list items */
+.menu li {
+    padding: 10px;
+    /* Adds spacing inside each menu item */
+    border-bottom: 1px solid #555;
+    /* Adds a separator between menu items */
+    text-align: left;
+    /* Aligns text to the left */
+}
+
+/* Styles for links inside the menu */
+.menu li a {
+    text-decoration: none;
+    /* Removes underlines from links */
+    color: white;
+    /* White text for visibility */
+    display: block;
+    /* Makes the link fill the entire list item */
+    padding: 10px;
+    /* Adds padding to make it easier to click */
+}
+
+/* 
+   Hamburger Menu
+   The menu is controlled by a checkbox that, when checked, displays the nav.
+*/
+#menu-check {
+    display: none;
+    /* Hides the checkbox */
+}
+
+/* When the checkbox is checked, the menu becomes visible */
+#menu-check:checked~nav {
+    display: block;
+}
+
+/* Styles for the menu icon (hamburger) */
+.menu-icon {
+    position: absolute;
+    /* Positions it over the header */
+    top: 10px;
+    /* Aligns it near the top */
+    left: 20px;
+    /* Places it on the left side */
+    font-size: 2em;
+    /* Makes it large enough for easy interaction */
+    cursor: pointer;
+    /* Indicates that it's clickable */
+}
+
+/* 
+   Main Content
+   Containers and cards for structuring the page content
+*/
+
+.main {
+    width: 90%;
+    /* Takes up most of the screen width */
+    margin: 0 auto;
+    /* Centers the content */
+    padding-top: 20px;
+    /* Adds space at the top */
+}
+
+
+.card {
+    background: white;
+    /* White background for contrast */
+    padding: 15px;
+    /* Adds space inside */
+    margin: 10px 0;
+    /* Adds space above and below */
+    border-radius: 5px;
+    /* Rounds the corners */
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    /* Adds a shadow effect */
+}
+
+/* Makes images in cards fully responsive */
+.card img {
+    width: 100%;
+    /* Ensures images fill their container */
+    border-radius: 5px;
+    /* Rounds the corners slightly */
+}
